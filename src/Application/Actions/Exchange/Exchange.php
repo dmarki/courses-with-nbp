@@ -7,17 +7,19 @@ use App\Domain\Exchange\ExchangeRepository;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
-class Exchange {
+class Exchange
+{
     private ExchangeRepository $exchangeRepository;
 
-    public function __construct(ExchangeRepository $exchangeRepository) {
+    public function __construct(ExchangeRepository $exchangeRepository)
+    {
         $this->exchangeRepository = $exchangeRepository;
     }
 
     public function __invoke(
-            ServerRequestInterface $request,
-            ResponseInterface $response,
-            array $args
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        array $args
     ): ResponseInterface {
         extract($request->getParsedBody());
 

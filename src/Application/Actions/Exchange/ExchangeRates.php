@@ -12,19 +12,21 @@ use Slim\Views\Twig;
  *
  * @author marki
  */
-class ExchangeRates {
+class ExchangeRates
+{
     private Twig $twig;
     private ExchangeRepository $exchangeRepository;
 
-    public function __construct(Twig $twig, ExchangeRepository $exchangeRepository) {
+    public function __construct(Twig $twig, ExchangeRepository $exchangeRepository)
+    {
         $this->twig = $twig;
         $this->exchangeRepository = $exchangeRepository;
     }
 
     public function __invoke(
-            ServerRequestInterface $request,
-            ResponseInterface $response,
-            array $args
+        ServerRequestInterface $request,
+        ResponseInterface $response,
+        array $args
     ): ResponseInterface {
         $rateDate = $args['date'] ?? '';
 
@@ -42,5 +44,4 @@ class ExchangeRates {
 
         return $this->twig->render($response, 'exchange-rates.twig', $viewData);
     }
-
 }

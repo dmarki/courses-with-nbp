@@ -1,6 +1,7 @@
 #!/usr/bin/env php
 <?php
 
+use App\Command\RatesImport;
 use DI\ContainerBuilder;
 use Symfony\Component\Console\Application;
 
@@ -16,15 +17,11 @@ $settings($containerBuilder);
 $dependencies = require __DIR__ . '/../app/dependencies.php';
 $dependencies($containerBuilder);
 
-// Set up repositories
-$repositories = require __DIR__ . '/../app/repositories.php';
-$repositories($containerBuilder);
-
 // Build PHP-DI Container instance
 $container = $containerBuilder->build();
 
 $application = new Application();
 
-$application->add(new \App\Command\RatesImport('RatesImport', $container));
+$application->add(new RatesImport('RatesImport', $container));
 
 $application->run();

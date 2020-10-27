@@ -5,17 +5,31 @@ namespace Tests\Application\Actions\Exception;
 use App\Application\Actions\Exception\CalculateExchange;
 use Tests\TestCase;
 
-class CalculateExchengeTest extends TestCase {
+class CalculateExchengeTest extends TestCase
+{
 
     /**
      * @dataProvider provider
      */
-    public function testAction(int $currencyCount, array $rateToBeReplaced, array $rateReplaced, $float) {
+    public function testAction(
+        int $currencyCount,
+        array $rateToBeReplaced,
+        array $rateReplaced,
+        ?float $result
+    ) {
 
-        $this->assertEquals(CalculateExchange::calculate($currencyCount, $rateToBeReplaced, $rateReplaced), $float);
+        $this->assertEquals(
+            CalculateExchange::calculate(
+                $currencyCount,
+                $rateToBeReplaced,
+                $rateReplaced
+            ),
+            $resul
+        );
     }
 
-    public function provider() {
+    public function provider()
+    {
         return [
             [
                 10,
@@ -43,5 +57,4 @@ class CalculateExchengeTest extends TestCase {
             ],
         ];
     }
-
 }

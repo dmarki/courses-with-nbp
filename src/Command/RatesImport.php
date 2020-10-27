@@ -7,11 +7,13 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class RatesImport extends Command {
+class RatesImport extends Command
+{
 
     private Container $ci;
 
-    public function __construct(string $name, Container $ci) {
+    public function __construct(string $name, Container $ci)
+    {
         parent::__construct($name);
 
         $this->ci = $ci;
@@ -22,10 +24,11 @@ class RatesImport extends Command {
      *
      * @return void
      */
-    protected function configure() {
+    protected function configure()
+    {
         $this
-                ->setName("rates-import")
-                ->setDescription("This command make import currency rates");
+            ->setName("rates-import")
+            ->setDescription("This command make import currency rates");
     }
 
     /**
@@ -35,20 +38,18 @@ class RatesImport extends Command {
      * @param OutputInterface $output
      * @return int|null|void
      */
-    protected function execute(InputInterface $input, OutputInterface $output) {
+    protected function execute(InputInterface $input, OutputInterface $output)
+    {
         $nbp = 'https://www.nbp.pl/kursy/xml/dir.txt';
 
         $rateFiles = explode("\n", file_get_contents($nbp));
 
-        $rateFiles = array_filter($rateFiles, function($hash) {
-            return $hash[0] === 'a';
-        });
+        $rateFiles = array_filter($rateFiles, fn($hash) => $hash[0] === 'a');
 
         $rateFiles = array_slice($rateFiles, -7);
 
         foreach ($rateFiles as $file) {
             $file = trim($file);
-            var_dump($file);
             $fileName = "http://www.nbp.pl/kursy/xml/{$file}.xml";
 
             $ch = curl_init();
@@ -67,7 +68,8 @@ class RatesImport extends Command {
         return 1;
     }
 
-    private function prepareCurrencyRates($rates) {
+    private function prepareCurrencyRates($rates)
+    {
         $new = simplexml_load_string($rates);
         $con = json_encode($new);
         $newArr = json_decode($con, true);
@@ -75,7 +77,8 @@ class RatesImport extends Command {
         return $newArr;
     }
 
-    private function addRates(array $currencyArray) {
+    private function addRates(array $currencyArray)
+    {
         $repository = new ExchangeRepository($this->ci);
 
         foreach ($currencyArray['pozycja'] as $rate) {
@@ -88,5 +91,4 @@ class RatesImport extends Command {
             $repository->addDayAverageRate($currencyArray['data_publikacji'], $averageRate, $currencyId);
         }
     }
-
 }

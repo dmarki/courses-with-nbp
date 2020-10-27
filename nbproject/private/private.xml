@@ -3,23 +3,25 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/marki/bibby-lab/database/create-database.sql</file>
-            <file>file:/home/marki/bibby-lab/public/index.php</file>
-            <file>file:/home/marki/bibby-lab/app/middleware.php</file>
-            <file>file:/home/marki/bibby-lab/src/Application/Actions/User/ListUsersAction.php</file>
-            <file>file:/home/marki/bibby-lab/src/Application/Actions/Exchange/Exchange.php</file>
-            <file>file:/home/marki/bibby-lab/composer.json</file>
-            <file>file:/home/marki/bibby-lab/README.md</file>
-            <file>file:/home/marki/bibby-lab/src/Application/Actions/Exchange/CurrencyExchange.php</file>
-            <file>file:/home/marki/bibby-lab/src/Domain/Exchange/ExchangeRepository.php</file>
-            <file>file:/home/marki/bibby-lab/templates/exchange-rates.twig</file>
-            <file>file:/home/marki/bibby-lab/app/dependencies.php</file>
-            <file>file:/home/marki/bibby-lab/app/repositories.php</file>
-            <file>file:/home/marki/bibby-lab/src/Application/Actions/User/UserAction.php</file>
-            <file>file:/home/marki/bibby-lab/app/settings.php</file>
-            <file>file:/home/marki/bibby-lab/src/Application/Actions/Exchange/ExchangeRates.php</file>
-            <file>file:/home/marki/bibby-lab/app/routes.php</file>
-            <file>file:/home/marki/bibby-lab/templates/currency-exchange.twig</file>
+            <file>file:/home/marki/courses-with-nbp/src/Application/Actions/Action.php</file>
+            <file>file:/home/marki/courses-with-nbp/app/settings.php</file>
+            <file>file:/home/marki/courses-with-nbp/src/Application/Handlers/ShutdownHandler.php</file>
+            <file>file:/home/marki/courses-with-nbp/app/routes.php</file>
+            <file>file:/home/marki/courses-with-nbp/src/Domain/DomainException/DomainException.php</file>
+            <file>file:/home/marki/courses-with-nbp/database/create-database.sql</file>
+            <file>file:/home/marki/courses-with-nbp/app/dependencies.php</file>
+            <file>file:/home/marki/courses-with-nbp/tests/bootstrap.php</file>
+            <file>file:/home/marki/courses-with-nbp/script/cli.php</file>
+            <file>file:/home/marki/courses-with-nbp/phpunit.xml</file>
+            <file>file:/home/marki/courses-with-nbp/.gitignore</file>
+            <file>file:/home/marki/courses-with-nbp/src/Application/Actions/Exchange/Exchange.php</file>
+            <file>file:/home/marki/courses-with-nbp/src/Application/Actions/Exchange/ExchangeRates.php</file>
+            <file>file:/home/marki/courses-with-nbp/src/Domain/Exchange/ExchangeRepository.php</file>
+            <file>file:/home/marki/courses-with-nbp/src/Application/Actions/ActionPayload.php</file>
+            <file>file:/home/marki/courses-with-nbp/app/middleware.php</file>
+            <file>file:/home/marki/courses-with-nbp/src/Command/RatesImport.php</file>
+            <file>file:/home/marki/courses-with-nbp/src/Application/Actions/Exchange/CurrencyExchange.php</file>
+            <file>file:/home/marki/courses-with-nbp/tests/TestCase.php</file>
         </group>
     </open-files>
 </project-private>

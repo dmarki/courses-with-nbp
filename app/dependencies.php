@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 use DI\ContainerBuilder;
@@ -28,7 +29,7 @@ return function (ContainerBuilder $containerBuilder) {
             return $logger;
         },
         'db' => function (ContainerInterface $c): PDO {
-            $pdo = new PDO("mysql:host=localhost; dbname=currency", 'bibby-lab', '');
+            $pdo = new PDO("mysql:host=localhost; dbname=nbp", 'nbp', '');
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             return $pdo;
@@ -45,7 +46,7 @@ return function (ContainerBuilder $containerBuilder) {
         TwigMiddleware::class => function (ContainerInterface $container) {
             return TwigMiddleware::createFromContainer(
                 $container->get(App::class),
-                            Twig::class
+                Twig::class
             );
         },
     ]);
