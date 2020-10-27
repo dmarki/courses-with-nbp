@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/marki/bibby-lab/database/create-database.sql</file>
+            <file>file:/home/marki/bibby-lab/public/index.php</file>
+            <file>file:/home/marki/bibby-lab/app/middleware.php</file>
+            <file>file:/home/marki/bibby-lab/src/Application/Actions/User/ListUsersAction.php</file>
+            <file>file:/home/marki/bibby-lab/src/Application/Actions/Exchange/Exchange.php</file>
+            <file>file:/home/marki/bibby-lab/composer.json</file>
+            <file>file:/home/marki/bibby-lab/README.md</file>
+            <file>file:/home/marki/bibby-lab/src/Application/Actions/Exchange/CurrencyExchange.php</file>
+            <file>file:/home/marki/bibby-lab/src/Domain/Exchange/ExchangeRepository.php</file>
+            <file>file:/home/marki/bibby-lab/templates/exchange-rates.twig</file>
+            <file>file:/home/marki/bibby-lab/app/dependencies.php</file>
+            <file>file:/home/marki/bibby-lab/app/repositories.php</file>
+            <file>file:/home/marki/bibby-lab/src/Application/Actions/User/UserAction.php</file>
+            <file>file:/home/marki/bibby-lab/app/settings.php</file>
+            <file>file:/home/marki/bibby-lab/src/Application/Actions/Exchange/ExchangeRates.php</file>
+            <file>file:/home/marki/bibby-lab/app/routes.php</file>
+            <file>file:/home/marki/bibby-lab/templates/currency-exchange.twig</file>
+        </group>
+    </open-files>
+</project-private>

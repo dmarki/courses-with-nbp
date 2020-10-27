@@ -1,0 +1,57 @@
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin: 15px;
+    }
+    th, td {
+        padding: 5px;
+        text-align: left;    
+    }
+    tr:nth-child(even) {
+        background-color: #eee;
+    }
+    div {
+        margin: 15px;
+        text-align: center;
+        font-size: 25px;
+        font-weight: 600;
+    }
+    select {
+        height: 25px;
+    }
+</style>
+
+<div>
+    <span>Średnie kursy walut z NBP na dzień:</span>
+    <select id="date-list">
+        <option value=''>Wybierz datę</option>
+        {% for date in rateDates %}
+            <option value="{{ date.rateDate }}" {% if date.rateDate == rateDate %}selected{% endif %}>{{ date.rateDate|date("Y-m-d") }}</option>
+        {% endfor %}
+    </select>
+</div>
+
+{% if currencyAverageDate|default() %}
+    <table style="width:100%">
+        <tr>
+            <th>Przelicznik</th>
+            <th>Waluta</th>
+            <th>Kurs</th>
+        </tr>
+
+        {% for cAD in currencyAverageDate %}
+            <tr>
+                <td>{{ cAD.converter }}</td>
+                <td>{{ cAD.currency }}</td>
+                <td>{{ cAD.rate }}</td>
+            </tr>
+        {% endfor %}
+    </table> 
+{% endif %}
+
+<script>
+    document.getElementById('date-list').addEventListener('change', function() {
+        window.location.href = '/exchange-rates/' + this.value;
+    });
+</script>
