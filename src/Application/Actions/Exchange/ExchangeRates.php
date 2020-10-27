@@ -7,11 +7,6 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\Views\Twig;
 
-/**
- * Description of ExchangeRates
- *
- * @author marki
- */
 class ExchangeRates
 {
     private Twig $twig;

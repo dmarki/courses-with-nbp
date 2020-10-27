@@ -29,7 +29,7 @@
     </p>
     
     <p>
-        Kwota do wymiany: <input name="currencyCount" type="number" min="1" required>     
+        Kwota do wymiany: <input name="currencyCount" type="number" min="1" max='1000000' required>     
 
         <select name="currencyToBeReplaced" id="date-list" required>
             <option value="">Wybierz walutę</option>
@@ -54,7 +54,7 @@
     </p>
     
     <p id="calculate-result" style="display: none;">
-        <span>Kwota, którą otrzymasz po wymianie wymienionej wyżej waluty to:</span><span id="currency-value"></span>
+        <span>Kwota, którą otrzymasz po wymianie wymienionej wyżej waluty to: </span><span id="currency-value"></span>
     </p>  
 </form>
     

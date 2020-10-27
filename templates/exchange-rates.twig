@@ -1,5 +1,11 @@
 <style>
-    table, th, td {
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin: 15px;
+        width: 600px;
+    }
+    th, td {
         border: 1px solid black;
         border-collapse: collapse;
         margin: 15px;
@@ -33,7 +39,7 @@
 </div>
 
 {% if currencyAverageDate|default() %}
-    <table style="width:100%">
+    <table>
         <tr>
             <th>Przelicznik</th>
             <th>Waluta</th>
