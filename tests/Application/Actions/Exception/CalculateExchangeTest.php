@@ -24,7 +24,7 @@ class CalculateExchengeTest extends TestCase
                 $rateToBeReplaced,
                 $rateReplaced
             ),
-            $resul
+            $result
         );
     }
 
